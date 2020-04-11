@@ -10,7 +10,7 @@
     tools:context=".SignIn">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -21,6 +21,7 @@
         app:startIconDrawable="@drawable/ic_person_black_24dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
@@ -28,7 +29,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phone"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -39,15 +40,15 @@
         app:startIconDrawable="@drawable/ic_phone_android_black_24dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:inputType="phone"/>
+            android:inputType="phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -58,10 +59,11 @@
         app:startIconDrawable="@drawable/ic_perm_identity_black_24dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/scholarid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:inputType="number"/>
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +83,12 @@
             android:inputType="none" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
+        android:id="@+id/press"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/press"/>
+        android:text="Regsiter"
+        android:gravity="center"
+        android:layout_gravity="center"/>
 </LinearLayout>
