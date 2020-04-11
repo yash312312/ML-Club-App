@@ -1,5 +1,6 @@
 package com.example.mlclub;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Gravity;
 
@@ -33,5 +34,13 @@ public class MainScreen extends AppCompatActivity {
         }
         else
         super.onBackPressed();
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("lastActivity", getClass().getName());
+        editor.apply();
     }
 }

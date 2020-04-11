@@ -11,10 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SignIn" />
         <activity android:name=".ConfEmailActivity" />
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainScreen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Dispatcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
