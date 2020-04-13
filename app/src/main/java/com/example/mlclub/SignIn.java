@@ -45,7 +45,10 @@ public class SignIn extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 uploadToDatabase();
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -79,11 +82,23 @@ public class SignIn extends AppCompatActivity {
         String ph=phoneno.getText().toString();
         String br=dropdown.getText().toString();
         //String name, String scholarid, String phoneno, String email, String branch
+
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("X", MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("name", nm);
+        editor.putString("scholarid", sch);
+        editor.putString("phoneno", ph);
+        editor.putString("branch", br);
+        editor.putString("email", em);
+        editor.apply();
+
         Student student=new Student(nm,sch,ph,em,br);
         db.collection("users").document(em).set(student);
 
     }
+    public void storeLocally()  {
 
+    }
     @Override
     protected void onPause() {
         super.onPause();
